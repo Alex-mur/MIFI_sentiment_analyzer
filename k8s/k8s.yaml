@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: sentiment-app
-          image: sentiment-app:1.0.0
+          image: sentiment-app:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
