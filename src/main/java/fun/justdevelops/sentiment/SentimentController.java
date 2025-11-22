@@ -14,7 +14,7 @@ public class SentimentController {
     @GetMapping("/sentiment")
     public SentimentResponse sentiment(@RequestParam("text") String text) {
         String sentiment = "positive";
-        if (RandomGenerator.getDefault().nextInt() % 2 > 0) {
+        if (text.length() % 2 > 0) {
             sentiment = "negative";
         }
         return new SentimentResponse(sentiment);
